@@ -1,0 +1,306 @@
+/* Hero Section */
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #0f172a, #1e40af); /* Blue-black gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
+  
+  .heroDescription {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #1e293b; /* Blue-black text color */
+    text-align: center;
+  }
+  
+  /* Benefits Section */
+  .benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .benefitCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .benefitCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .benefitIcon {
+    font-size: 3rem;
+    color: #3b82f6; /* Friendly blue color */
+    margin-bottom: 1rem;
+  }
+  
+  .benefitTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+  
+  .benefitDescription {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    gap: 3rem;
+  }
+  
+  /* Hero Section */
+
+  .heroStats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 4rem auto 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .stat {
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .statIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    color: #60a5fa;
+  }
+  
+  .statNumber {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statLabel {
+    font-size: 1rem;
+    color: #e2e8f0;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 1.25rem 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1a365d;
+  }
+  
+  /* Features Grid */
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .featureCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .featureCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .featureIcon {
+    color: #60a5fa;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .featureTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2d3748;
+  }
+  
+  .featureDescription {
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  
+  /* Process Timeline */
+  .processTimeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10rem;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .processStep {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .processNumber {
+    width: 3rem;
+    height: 3rem;
+    background: #60a5fa;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+  }
+  
+  /* Tech Grid */
+  .techGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .techCard {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .techCard:hover {
+    transform: translateY(-3px);
+  }
+  
+  .techIcon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .techName {
+    font-weight: 500;
+    color: #2d3748;
+  }
+  
+  /* CTA Section */
+  .ctaSection {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+    margin-top: 4rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ctaDescription {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #e2e8f0;
+  }
+  
+  .ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #60a5fa;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .ctaButton:hover {
+    background: #3b82f6;
+  }
+  
+  .buttonIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  /* Animation Classes */
+  .fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .heroTitle {
+      font-size: 2.5rem;
+    }
+    
+    .heroStats {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .section {
+      padding: 3rem 1rem;
+    }
+    
+    .sectionTitle {
+      font-size: 2rem;
+    }
+    
+    .featuresGrid,
+    .processTimeline,
+    .techGrid {
+      grid-template-columns: 1fr;
+    }
+    .processTimeline{
+        gap: 2rem;
+    }
+  }

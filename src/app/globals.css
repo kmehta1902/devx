@@ -1,0 +1,85 @@
+/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #2563eb;
+  --text-color: #1f2937;
+  --gray-600: #4b5563;
+  --bg-light: #f9fafb;
+  --max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  width: 100%;
+  min-width: var(--max-width);
+  max-width: var(--max-width);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  min-width: var(--max-width);
+  max-width: var(--max-width);
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+  position: relative;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Container styles for all major sections */
+section, 
+.container, 
+.wrapper {
+  width: 100%;
+  min-width: 100%;
+  max-width: var(--max-width);
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow-x: hidden;
+}
+
+/* Grid containers */
+.grid {
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+/* Media query adjustments */
+@media screen and (min-width: 768px) {
+  section,
+  .container,
+  .wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section,
+  .container,
+  .wrapper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Prevent horizontal overflow on all images */
+img {
+  max-width: 100%;
+  height: auto;
+}

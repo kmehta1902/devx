@@ -1,0 +1,378 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.navbarContent {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  position: relative;
+}
+
+/* Logo styles */
+.logo {
+  width: 160px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* Navigation wrapper for centering */
+.navLinksWrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+/* Main navigation styles */
+.navLinks {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 0.4rem 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navLink:hover {
+  color: #0066ff;
+}
+
+/* Dropdown styles */
+.dropdownContainer {
+  /* 
+  height: 100%;
+  display: flex;
+  align-items: center; */
+  position: static;
+  /* position: relative; */
+  display: inline-block;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 700px;
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  z-index: 1000;
+  border: 1px solid #f0f0f0;
+  margin-top: 1.3rem;
+}
+
+/* Grid layout for dropdown content */
+.dropdownContent {
+  min-width: 220px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Animation classes for dropdown items */
+.dropdownContent.right > * {
+  animation: slideFromRight 0.3s ease forwards;
+}
+
+.dropdownContent.left > * {
+  animation: slideFromLeft 0.3s ease forwards;
+}
+
+/* Dropdown animations */
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Individual dropdown item styling */
+.dropdownItem {
+  display: block;
+  padding: 1rem;
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Dropdown text styling */
+.dropdownTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.dropdownDescription {
+  font-size: 12px;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* Staggered animation delays for dropdown items */
+
+.dropdownContent > *:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dropdownContent > *:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.dropdownContent > *:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.dropdownContent > *:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+.dropdownContent > *:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+.dropdownContent > *:nth-child(6) {
+  animation-delay: 0.25s;
+}
+
+.dropdownContent > *:nth-child(7) {
+  animation-delay: 0.3s;
+}
+
+.dropdownContent > *:nth-child(8) {
+  animation-delay: 0.35s;
+}
+
+.dropdownContent > *:nth-child(9) {
+  animation-delay: 0.4s;
+}
+
+.dropdownItem:last-child {
+  margin-bottom: 0;
+}
+
+.dropdownItem:hover {
+  background-color: #f5f5f5;
+}
+
+/* Action buttons styling */
+.actionButtons {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+.quoteBtn {
+  text-decoration: none;
+  color: white;
+  background-color: #0066ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.quoteBtn:hover {
+  background-color: #0052cc;
+}
+
+/* Mobile buttons container */
+.mobileButtons {
+  position: sticky;
+  bottom: 0;
+  padding: 1.5rem;
+  background-color: white;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile quote button specific styles */
+.mobileButtons .quoteBtn {
+  width: 80%;
+  padding: 0.8rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #333;
+  z-index: 9999;
+  margin-left: 1rem;
+}
+
+.hamburger.open {
+  color: #333;
+}
+
+/* Mobile menu styling */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 998;
+}
+
+.mobileMenu.open {
+  display: block;
+}
+
+/* Mobile navigation links */
+.mobileNavLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #4a4a4a;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Mobile dropdown container */
+.mobileDropdownContainer {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Mobile dropdown menu */
+.mobileDropdown {
+  background-color: #f8f8f8;
+  padding: 0.5rem 1rem;
+}
+
+/* Mobile dropdown items */
+.mobileDropdownItem {
+  display: block;
+  padding: 1rem;
+  color: #4a4a4a;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobileDropdownItem:last-child {
+  border-bottom: none;
+}
+
+/* Mobile action buttons */
+.mobileButtons {
+  position: sticky;
+  bottom: 0;
+  padding: 1rem;
+  background-color: white;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 1rem;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+
+  .navLinksWrapper {
+    display: none;
+  }
+
+  .actionButtons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbarContent {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1201px) {
+  .mobileMenu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .quoteBtn {
+    font-size: 12px;
+    padding: 0.3rem 0.6rem;
+  }
+}

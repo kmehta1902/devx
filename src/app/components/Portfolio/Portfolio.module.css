@@ -1,0 +1,349 @@
+.portfolio {
+  padding: 4rem 0;
+  background-color: #f9fafb;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.description {
+  color: #4b5563;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.filterButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  color: #4b5563;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.filterButton.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.projectCard {
+  min-height: 300px;
+  transform-origin: center center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.cardHeader {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  transition: transform 0.3s ease;
+}
+
+.projectIcon {
+  color: white;
+  margin-top: 15%;
+  margin-bottom: 2rem;
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+
+.projectTitle {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  padding: 1rem 2rem;
+  line-height: 1.3;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.932);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 3rem;
+  text-align: center;
+}
+
+.projectCard:hover .cardOverlay {
+  opacity: 1;
+}
+
+.projectCard:hover .projectTitle {
+  opacity: 0;
+}
+
+.projectCard:hover .cardHeader {
+  transform: translateY(-20px);
+}
+
+.projectDescription {
+  color: white;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0.1s;
+}
+
+.projectCard:hover .projectDescription {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.caseStudyLink {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0.2s;
+}
+
+.projectCard:hover .caseStudyLink {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.caseStudyLink:hover {
+  color: #93c5fd;
+}
+
+/* Gradient backgrounds */
+.blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.purple { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.pink{ background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.green { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.orange { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.indigo { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+
+.viewMore {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.viewMoreButton {
+  background-color: #2563eb;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.viewMoreButton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .grid {
+    gap: 2rem;
+  }
+  
+  .projectCard {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .projectCard {
+    min-height: 350px;
+  }
+  
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+  
+  .projectDescription {
+    font-size: 1.1rem;
+  }
+  
+  .cardHeader {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .filters {
+    gap: 0.75rem;
+  }
+  
+  .filterButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    margin: 2rem 0;
+  }
+  
+  .projectCard {
+    min-height: 300px;
+  }
+  
+  .cardHeader {
+    padding: 2.5rem 2rem;
+  }
+  
+  .projectIcon {
+    transform: scale(1.25);
+  }
+  
+  .projectTitle {
+    font-size: 1.4rem;
+  }
+  
+  .projectDescription {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .cardOverlay {
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectCard {
+    min-height: 280px;
+  }
+  
+  .cardHeader {
+    padding: 2rem 1.5rem;
+  }
+  
+  .projectIcon {
+    transform: scale(1.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .projectTitle {
+    font-size: 1.3rem;
+  }
+  
+  .filterButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+.viewMoreButton a{
+  text-decoration: none;
+  color: white;
+}

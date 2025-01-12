@@ -1,0 +1,212 @@
+.container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 4rem;
+}
+
+.testimonialCarousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 1rem;
+  margin: 0 -0.5rem;
+}
+
+.card {
+  flex: 0 0 calc(33.333% - 1rem);
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40vh;
+  transition: opacity 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 1rem;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.8rem;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stars {
+  color: #ffd700;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.text {
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  overflow: visible;
+  display: block;
+  width: 100%;
+}
+
+.navigationDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background: #4285f4;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.prevButton {
+  left: -20px;
+}
+
+.nextButton {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .testimonialCarousel {
+    overflow: hidden;
+    margin-bottom: 3rem;
+    width: 100%;
+    position: relative;
+    min-height: 40vh; /* Add minimum height to prevent layout shift */
+  }
+  
+  .carouselTrack {
+    display: flex;
+    overflow: visible;
+    position: relative;
+    margin: 0;
+    height: 100%;
+  }
+  
+  .card {
+    flex: 0 0 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease;
+    margin: 0;
+    cursor: pointer;
+    transform: translateX(100%);
+  }
+  
+  .card.activeCard {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transform: translateX(0);
+  }
+  
+  .navigationDots {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    background: transparent;
+    z-index: 2;
+  }
+
+
+  .navButton {
+    display: none;
+  }
+}

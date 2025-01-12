@@ -1,0 +1,211 @@
+.services {
+  padding: 5rem 0;
+  background-color: rgb(249, 250, 251);
+  padding-bottom: 1rem;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.description {
+  color: black;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  background-color: #1f2937;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 2rem;
+  isolation: isolate;
+  transition: all 0.3s ease;
+  border: 1px solid #374151;
+}
+
+.spotlight {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle at center,
+    rgba(229, 231, 235, 0.15) 0%,
+    rgba(229, 231, 235, 0.05) 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background-color: rgba(37, 99, 235, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #60a5fa;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.checkmark {
+  color: #34d399;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Add these new styles to your existing Services.module.css */
+
+@media (max-width: 768px) {
+  .grid {
+    display: block;
+    position: relative;
+    height: 450px; /* Adjust based on your card height */
+    margin: 0 1rem;
+  }
+
+  .card {
+    position: absolute;
+    height: 60vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: 
+      opacity 0.5s ease,
+      visibility 0.5s ease,
+      transform 0.5s ease;
+  }
+
+  .card.activeCard {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    position: absolute;
+  }
+
+  /* Disable spotlight effect on mobile */
+  .spotlight {
+    display: none;
+  }
+}
+
+/* Optional: Add progress indicators for mobile */
+.mobileIndicators {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileIndicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    transition: background-color 0.3s ease;
+  }
+
+  .indicator.active {
+    background-color: #4f46e5;
+  }
+}
+
+/* Keep all your existing styles and other media queries */
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .header {
+    margin-bottom: 3rem;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+}

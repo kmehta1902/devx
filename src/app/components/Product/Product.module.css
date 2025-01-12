@@ -1,0 +1,147 @@
+.wrapper {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .blogPost {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .content {
+    padding: 2rem;
+  }
+  
+  .metadata {
+    margin-bottom: 1rem;
+  }
+  
+  .date {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .projectTitle {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .details {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .section {
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+  }
+  
+  .section h3 {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tag {
+    background: #f0f0f0;
+    color: #444;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .featureList {
+    list-style: disc;
+    margin-left: 1.5rem;
+    color: #444;
+  }
+  
+  .featureList li {
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .main {
+      padding: 1rem;
+    }
+    
+    .imageContainer {
+      height: 300px;
+    }
+    
+    .content {
+      padding: 1.5rem;
+    }
+    
+    .projectTitle {
+      font-size: 1.5rem;
+    }
+  }
