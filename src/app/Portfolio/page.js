@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 
 import { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -221,33 +220,4 @@ export default function Portfolio() {
       <Footer />
     </div>
   );
-=======
-import { useEffect } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
-import Testimonials from '../../components/Testimonials/Testimonials';
-import QuoteForm from '../../components/QuoteForm/QuoteForm';
-import ContactForm from '../../components/ContactForm/ContactForm';
-import Footer from '../../components/Footer/Footer';
-import SplashCursor from '../../components/Cursor/SplashCursor';
-import Blog from '../../components/Blog/Blog'
-
-export default function Home() {
-
-    return (
-        <div>
-
-            <main>
-                <Navbar />
-                <SplashCursor />
-
-                <Testimonials />
-                <Blog />
-                <QuoteForm />
-                <ContactForm />
-            </main>
-
-            <Footer />
-        </div>
-    );
->>>>>>> 1b04f56d25a0187f0ea002f618081342944803d5
 }
